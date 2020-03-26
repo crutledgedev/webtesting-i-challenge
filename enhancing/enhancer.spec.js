@@ -47,3 +47,18 @@ it('fail', () => {
 
 })
 
+describe("ehancer.js", () => {
+    describe(".repair()", () => {
+        it("increase durability to 100", function(){
+            expect(enhancer.repair({
+                name: 'Chungus',
+                durability:  85,
+                enhancement: 20
+            })).toEqual({
+                name: 'Chungus',
+                durability:  100,
+                enhancement: 20
+            });
+        })
+    })
+})
